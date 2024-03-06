@@ -1,6 +1,6 @@
 #include <stdint.h>
-#include "../headers/distance.h"
 #include <stdlib.h>
+#include "../headers/distance.h"
 
 
 int64_t squared_manhattan_distance(const point_t *p1, const point_t *p2, int dimension) {
@@ -23,3 +23,5 @@ int64_t squared_euclidean_distance(const point_t *p1, const point_t *p2, int dim
 	}
     	return sum;
 }
+
+// TODO modifier le fichier header distance.h pour correspondre aux fonctions dans ce fichier
