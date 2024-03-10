@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <inttypes.h>
 #include "headers/portable_endian.h"
 #include "headers/point.h"
 
@@ -39,7 +40,7 @@ int main() {
 	parse_binary(file, &vectors, &num_vectors, &dimension);
 
 	for (uint64_t i = 0; i < num_vectors; i++) {
-		printf("Vector %llu: (%lld, %lld)\n", (unsigned long long) i, (long long) vectors[i].x, (long long) vectors[i].y);
+		printf("Vector %"PRIu64": (%"PRIu64", %"PRIu64")\n", i, vectors[i].x, vectors[i].y);
 	}	
 	free(vectors);
 	fclose(file);
